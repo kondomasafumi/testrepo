@@ -16,7 +16,7 @@ body {
     color: rgb(27, 11, 33);
 }
 
- nav ul , li {
+ nav ul li {
     /* luは入れるのか */
     display: inline;
     margin: 0 10px;
