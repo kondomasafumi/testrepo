@@ -1,36 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
 
-main{
+main {
     text-align: center;
 }
-header{
+
+header {
     background-color: hsl(201, 30%, 51%);
     color: rgb(28, 24, 55);
-    padding: 20px  ;
+    padding: 20px;
     text-align: center;
 }
+
 body {
-    font-family:  Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     background-color: #99bad8;
     color: rgb(27, 11, 33);
 }
 
- nav ul li {
-    /* luは入れるのか */
+ul li {
     display: inline;
     margin: 0 10px;
-   /* aを入れないのはなぜ。,を入れるか入れないかで変わるのか */
 }
-.nav-list li a {
+
+li a {
     color: rgb(251, 248, 251);
     text-decoration: none;
     font-weight: bold;
 }
-nav ul {
-    padding: 0;
-}
-/* 細かく指示が分かれているのはなぜか */
+
 form {
     max-width: 400px;
     margin: auto;
@@ -39,10 +37,15 @@ form {
     border-radius: 30px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-label, input, textarea, button {
+
+label,
+input,
+textarea,
+button {
     width: 100%;
     margin-bottom: 10px;
 }
+
 button {
     background-color: #196cc6;
     color: rgb(255, 255, 255);
@@ -51,35 +54,55 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-.skill{background-color: #84cf9d;
-padding: 6px;
-border-radius: 5px;
 
+.skill {
+    background-color: #84cf9d;
+    padding: 4px;
+    border-radius: 5px;
 }
+
 img {
-    max-width: 400px;  /* 最大幅を500ピクセルに設定 */
-    height: auto;      /* 高さを自動調整 */
-  }
-.pfimg{max-width: 200px;
+    max-width: 400px;
+    /* 最大幅を500ピクセルに設定 */
+    height: auto;
+    /* 高さを自動調整 */
+}
+
+.pfimg {
+    max-width: 200px;
     border-radius: 8px;
     border: 3px solid #1b446f;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
+
 ul {
     display: flex;
     text-align: center;
     justify-content: center;
-    }
- .profile{   background-color: #cce5ff;
-    padding: 20px;
+
+}
+
+.profile {
+    background-color: #cce5ff;
+    padding: 25px;
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding-top: 50px;
 }
-footer{text-align: center;
+
+footer {
+    text-align: center;
     margin-top: 1px;
     margin-bottom: 4px;
-   
+}
 
+.skillsyoukai,
+.porteforio {
+    margin-top: 60px;
+    background-color: #bfd2f2;
+    padding: 1px;
+}
+
+.porteforio p {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
