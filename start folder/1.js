@@ -1,0 +1,1 @@
+console.log("worx外部参照")
