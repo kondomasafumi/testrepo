@@ -18,15 +18,16 @@ body {
     color: rgb(27, 11, 33);
 }
 
-ul li {
+nav ul li {
     display: inline;
     margin: 0 10px;
 }
 
-li a {
+nav li a{
     color: rgb(251, 248, 251);
     text-decoration: none;
     font-weight: bold;
+    margin: 20px;
 }
 
 form {
@@ -59,6 +60,8 @@ button {
     background-color: #84cf9d;
     padding: 4px;
     border-radius: 5px;
+    display: inline;
+    margin: 15px;
 }
 
 img {
@@ -66,6 +69,7 @@ img {
     /* 最大幅を500ピクセルに設定 */
     height: auto;
     /* 高さを自動調整 */
+    ;
 }
 
 .pfimg {
@@ -75,7 +79,6 @@ img {
 }
 
 ul {
-    display: flex;
     text-align: center;
     justify-content: center;
 
@@ -106,3 +109,13 @@ footer {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+ul li {
+    list-style: none;
+}
+
+div ul  {
+    display: flex;
+}
+div ul li {
+margin: 30px;
+justify-content: center}
