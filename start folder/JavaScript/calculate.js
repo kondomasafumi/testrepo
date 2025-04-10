@@ -25,7 +25,7 @@ function calculate() {
     return;
   }
 
-  let result;
+  let result= mull;
   let formulaText = "";
 
   if (operator === "additon") {
