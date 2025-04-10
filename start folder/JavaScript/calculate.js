@@ -41,11 +41,11 @@ function calculate() {
     if (vol2 !== 0) {
       result = vol1 / vol2;
       formulaText = `${vol1} ÷ ${vol2} =`;
-    } else {
+    } else if (vol2 === 0)   {      
       result = "０では割れません";
       formulaText = `${vol1} ÷ ${vol2} =`;
     }
-  } else {
+  } else  {
     result = "不明な演算子";
     formulaText = "不明な演算子"; // または適切なエラーメッセージ
   }
