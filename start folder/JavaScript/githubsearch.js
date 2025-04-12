@@ -5,7 +5,10 @@ const resultArea = document.getElementById("result");
 clickBtn.addEventListener("click", clicksearch);
 function clicksearch() {
     const username = usernameInput.value;
-    const contents = resultArea.textContent
+    if (!username) {
+        resultArea.innerHTML = `ユーザー名を入力してください。`;
+        return;
+    }
     console.log("取得したユーザー名:", username);
     const url = `https://api.github.com/users/${username}`;
     fetch(url)
