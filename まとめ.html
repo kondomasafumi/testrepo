@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 練習リスト</title>
+    <style>
+      body {
+          background-color: #3a3a3a;
+          color: #d8d8d8;
+      }
+
+      a {
+          color: #4f8293; /* Light blue for links */
+      }
+
+      pre {
+          background-color: #222;
+          padding: 10px;
+          border-radius: 5px;
+          overflow-x: auto;
+      }
+  </style>
+</head>
+<body>
+
+    <h1>JavaScript 練習リスト</h1>
+
+    <ul>
+        <li>
+            <strong>変数</strong>
+            <ul>
+                <li><strong>使い方:</strong> データを格納するための名前付きの記憶領域。<code>let</code>、<code>const</code>、<code>var</code> で宣言します。</li>
+                <li><strong>構文:</strong>
+                    <ul>
+                        <li><code>let 変数名 = 値;</code> (再代入可能)</li>
+                        <li><code>const 定数名 = 値;</code> (再代入不可)</li>
+                        <li><code>var 変数名 = 値;</code> (古い構文、ブロックスコープを持たない)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>関数</strong>
+            <ul>
+                <li><strong>使い方:</strong> まとまった処理を記述し、再利用可能にするための仕組み。</li>
+                <li><strong>構文:</strong>
+                    <ul>
+                        <li><strong>関数宣言:</strong>
+                            <pre><code>function 関数名(引数1, 引数2, ...) {
+  // 処理
+  return 戻り値;
+}</code></pre>
+                        </li>
+                        <li><strong>関数式:</strong>
+                            <pre><code>const 関数名 = function(引数1, 引数2, ...) {
+  // 処理
+  return 戻り値;
+};</code></pre>
+                        </li>
+                        <li><strong>アロー関数 (ES6以降):</strong>
+                            <pre><code>const 関数名 = (引数1, 引数2, ...) => {
+  // 処理
+  return 戻り値;
+};</code></pre>
+                            <pre><code>// 引数が一つの場合、()を省略可能
+const 関数名 = 引数 => {
+  // 処理
+  return 戻り値;
+};</code></pre>
+                            <pre><code>// 処理がreturn文のみの場合、{}とreturnを省略可能
+const 関数名 = 引数 => 戻り値;</code></pre>
+                        </li>
+                        <li><strong>関数の呼び出し:</strong> <code>関数名(実引数1, 実引数2, ...);</code></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>基本制御構文</strong>
+            <ul>
+                <li><strong>使い方:</strong> プログラムの流れを制御するための構文。</li>
+                <li><strong>構文:</strong>
+                    <ul>
+                        <li><strong>if文:</strong> 条件によって処理を分岐
+                            <pre><code>if (条件式) {
+  // 条件が真の場合の処理
+} else if (別の条件式) {
+  // 別の条件が真の場合の処理
+} else {
+  // どの条件も偽の場合の処理
+}</code></pre>
+                        </li>
+                        <li><strong>switch文:</strong> 複数の条件で処理を分岐
+                            <pre><code>switch (式) {
+  case 値1:
+    // 式が値1と一致する場合の処理
+    break;
+  case 値2:
+    // 式が値2と一致する場合の処理
+    break;
+  default:
+    // どの値とも一致しない場合の処理
+}</code></pre>
+                        </li>
+                        <li><strong>for文:</strong> 繰り返し処理 (回数が決まっている場合など)
+                            <pre><code>for (初期化; 条件式; 更新式) {
+  // 繰り返す処理
+}</code></pre>
+                        </li>
+                        <li><strong>while文:</strong> 繰り返し処理 (条件が真の間)
+                            <pre><code>while (条件式) {
+  // 繰り返す処理
+}</code></pre>
+                        </li>
+                        <li><strong>do...while文:</strong> 繰り返し処理 (最低一度は実行)
+                            <pre><code>do {
+  // 繰り返す処理
+} while (条件式);</code></pre>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>DOM操作</strong>
+            <ul>
+                <li><strong>使い方:</strong> HTMLの構造 (DOMツリー) をJavaScriptから操作し、動的にコンテンツを変更したり、イベントに対応したりします。</li>
+                <li><strong>主なメソッド/プロパティ:</strong>
+                    <ul>
+                        <li><strong>要素の取得:</strong>
+                            <ul>
+                                <li><code>document.getElementById('id名')</code> (IDで要素を取得)</li>
+                                <li><code>document.querySelector('.クラス名')</code> (CSSセレクタで最初の要素を取得)</li>
+                                <li><code>document.querySelectorAll('.クラス名')</code> (CSSセレクタで全ての要素を取得)</li>
+                                <li><code>document.getElementsByTagName('タグ名')</code> (タグ名で全ての要素を取得 - HTMLCollection)</li>
+                                <li><code>document.getElementsByClassName('クラス名')</code> (クラス名で全ての要素を取得 - HTMLCollection)</li>
+                            </ul>
+                        </li>
+                        <li><strong>要素の操作:</strong>
+                            <ul>
+                                <li><code>要素.textContent = '新しいテキスト';</code> (テキストコンテンツの変更)</li>
+                                <li><code>要素.innerHTML = '新しいHTML';</code> (HTMLコンテンツの変更)</li>
+                                <li><code>要素.style.プロパティ名 = '新しい値';</code> (CSSスタイルの変更)</li>
+                                <li><code>要素.setAttribute('属性名', '値');</code> (属性の設定)</li>
+                                <li><code>要素.getAttribute('属性名');</code> (属性の値を取得)</li>
+                                <li><code>要素.classList.add('クラス名');</code> (クラスの追加)</li>
+                                <li><code>要素.classList.remove('クラス名');</code> (クラスの削除)</li>
+                            </ul>
+                        </li>
+                        <li><strong>要素の追加・削除:</strong>
+                            <ul>
+                                <li><code>document.createElement('タグ名')</code> (新しい要素を作成)</li>
+                                <li><code>親要素.appendChild(子要素);</code> (子要素を末尾に追加)</li>
+                                <li><code>親要素.insertBefore(新しい要素, 基準の要素);</code> (指定した要素の前に挿入)</li>
+                                <li><code>親要素.removeChild(子要素);</code> (子要素を削除)</li>
+                            </ul>
+                        </li>
+                        <li><strong>イベントリスナー:</strong>
+                            <ul>
+                                <li><code>要素.addEventListener('イベント名', 関数);</code> (イベントが発生した際の処理を設定)</li>
+                                <li>主なイベント: <code>click</code>, <code>mouseover</code>, <code>mouseout</code>, <code>change</code>, <code>submit</code> など</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>API (Application Programming Interface)</strong>
+            <ul>
+                <li><strong>使い方:</strong> プログラム間でデータをやり取りしたり、外部の機能を利用したりするための仕組み。JavaScriptでは、ブラウザが提供するWeb APIや、サーバーが提供するAPIなどを利用します。</li>
+                <li><strong>主なWeb APIの例:</strong>
+                    <ul>
+                        <li><strong>Fetch API:</strong> HTTPリクエストを送信してサーバーからデータを取得したり、データを送信したりする (非同期処理)。
+                            <pre><code>fetch('URL', {
+  method: 'GET', // HTTPメソッド (GET, POST, PUT, DELETEなど)
+  // headers: {...}, // ヘッダー情報
+  // body: JSON.stringify(データ) // 送信するデータ (POST, PUTなど)
+})
+.then(response => response.json()) // レスポンスをJSONとして解析
+.then(data => {
+  // 取得したデータの処理
+  console.log(data);
+})
+.catch(error => {
+  // エラー処理
+  console.error('エラー:', error);
+});</code></pre>
+                        </li>
+                        <li><strong>DOM API:</strong> (上記参照) HTML構造を操作するためのAPI。</li>
+                        <li><strong>タイマーAPI:</strong> <code>setTimeout()</code> (一定時間後に処理を実行)、<code>setInterval()</code> (一定時間間隔で処理を繰り返す)。</li>
+                        <li><strong>Geolocation API:</strong> ユーザーの地理的位置情報を取得。</li>
+                        <li><strong>Canvas API:</strong> グラフィックやアニメーションを描画。</li>
+                        <li><strong>Web Storage API:</strong> ブラウザにデータを保存 (<code>localStorage</code>, <code>sessionStorage</code>)。</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>非同期処理</strong>
+            <ul>
+                <li><strong>使い方:</strong> 時間のかかる処理 (例: ネットワークリクエスト、ファイルの読み込みなど) が完了するのを待たずに、他の処理を並行して実行するための仕組み。JavaScriptはシングルスレッドで動作するため、非同期処理を利用することで処理がブロックされるのを防ぎ、ユーザー体験を向上させます。</li>
+                <li><strong>主な方法:</strong>
+                    <ul>
+                        <li><strong>コールバック関数:</strong> 非同期処理が完了した後に実行される関数。
+                            <pre><code>function fetchData(callback) {
+  setTimeout(() => {
+    const data = { message: 'データ取得完了' };
+    callback(null, data); // 第一引数はエラー、第二引数は成功時のデータ
+  }, 1000);
+}
+
+fetchData((error, result) => {
+  if (error) {
+    console.error('エラー:', error);
+    return;
+  }
+  console.log('結果:', result);
+});
+console.log('非同期処理を開始...');</code></pre>
+                        </li>
+                        <li><strong>Promise:</strong> 非同期処理の状態 (成功、失敗、保留) を管理するオブジェクト。<code>.then()</code> で成功時の処理、<code>.catch()</code> で失敗時の処理を記述します。
+                            <pre><code>function fetchDataPromise() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = { message: 'Promiseでデータ取得完了' };
+      // 成功した場合
+      resolve(data);
+      // 失敗した場合
+      // reject('エラーが発生しました');
+    }, 1500);
+  });
+}
+
+fetchDataPromise()
+  .then(data => {
+    console.log('成功:', data);
+  })
+  .catch(error => {
+    console.error('エラー:', error);
+  });
+console.log('Promiseによる非同期処理を開始...');</code></pre>
+                        </li>
+                        <li><strong>async/await (ES2017以降):</strong> Promiseを利用した非同期処理を同期的なコードのように記述できる構文。<code>async</code> 関数内で <code>await</code> キーワードを使用します。
+                            <pre><code>async function fetchDataAsync() {
+  try {
+    console.log('async/awaitによる非同期処理を開始...');
+    const result = await new Promise(resolve => setTimeout(() => {
+      resolve({ message: 'async/awaitでデータ取得完了' });
+    }, 2000));
+    console.log('成功:', result);
+  } catch (error) {
+    console.error('エラー:', error);
+  }
+}
+
+fetchDataAsync();</code></pre>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

@@ -28,30 +28,25 @@
         <main>
             <section>
                 <article>
-                    <h2>問い合わせはこちら</h2>
+                    <h2>GitHub検索</h2>
 
                     <form action="#" method="post">
 
-
                         <label for="mane">お名前:</label><br>
-                        <input type="text" id="name" name="name" required><br>
+                        <input type="text" id="username" placeholder="GitHubユーザー名を入力" ><br>
 
-                        <label for="email">メールアドレス:</label><br>
-                        <input type="email" id="email" name="email" required><br>
+                        <button id="searchbtn">検索</button>
 
-                        <label for="message">メッセージ:</label><br>
-                        <textarea id="message" name="message" rows="5" required></textarea><br>
+                        <div id="result"></div>
 
-                        <button type="submit">送信</button><br>
-
-                    </form>
+                        </form>
                 </article>
             </section>
         </main>
         <footer>
             <small>&copy;2025 サンプルサイト</small>
         </footer>
-
+<script src="JavaScript/githubsearch.js"></script>
     </body>
 
 </html>
