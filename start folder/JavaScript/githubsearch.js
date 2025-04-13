@@ -4,7 +4,7 @@ const resultArea = document.getElementById("result");
 
 clickBtn.addEventListener("click", clicksearch);
 function clicksearch() {
-    const username = usernameInput.value;
+    const username = usernameInput.value.trim();
     if (!username) {
         resultArea.innerHTML = `ユーザー名を入力してください。`;
         return;
@@ -14,7 +14,7 @@ function clicksearch() {
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! status:${response.status}`);
+                throw new Error(`ユーザーが見つかりませんでした。`);
             }
             return response.json();
         }
@@ -28,8 +28,8 @@ function clicksearch() {
             <img src=${date.avatar_url} alt ="アイコン">`)
         .catch(error =>
             resultArea.innerHTML =
-            `<p> ユーザーが見つかりません</p>`
-        );
+            error.message
+        )
 }
 
 
